@@ -10,6 +10,7 @@ The preprocessing part includes :
 5. Tokenization;
 6. Stemming;
 7. Removing stop words;
+8. Removing outliers;
 The datasets after preprocessing are ‘cleaned_train.xlsx’, ‘cleaned_valid.xlsx’, and ‘cleaned_test.xlsx’.
 
 For model building, I fine-tuned pre-trained bert based models to do the prediction. The inputs are columns ‘clean_claim’ and ‘clean_explanation’, and the output is the predicted labels. I choose 3 pre-trained models: ‘bert-base-uncased’, ‘microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext’, and ‘monologg/biobert_v1.1_pubmed’.  I optimized my prediction model on cross entropy loss with Adam optimizer, and used prediction accuracy to evaluate the model's performance.
